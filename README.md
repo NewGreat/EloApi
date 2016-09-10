@@ -1,5 +1,4 @@
-EloApi [![][master img]][master]
-======
+# EloApi
 
 *Simple & easy implementation of Elo rating system.*
 
@@ -9,7 +8,9 @@ The Elo rating system is a method for calculating the relative skill levels of p
 
 Watch the [api documentation].
 
-##Copyright
+
+
+## Copyright
 
 Copyright © 2016 Nicolas Mauger. Released under the [WTFPL license].
 
