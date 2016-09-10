@@ -7,13 +7,17 @@ The Elo rating system is a method for calculating the relative skill levels of p
 
 ## Documentation
 
-Watch my [api documentation].
+Watch the [api documentation].
 
 ##Copyright
 
 Copyright © 2016 Nicolas Mauger. Released under the [WTFPL license].
 
-[api documentation]:https://github.com/maugern/StrongBox/blob/master/LICENSE.md
+
+
+[api documentation]:https://raw.githubusercontent.com/maugern/EloApi/master/doc/index.html
+
 [WTFPL license]:https://github.com/maugern/EloApi/blob/master/LICENSE.md
+
 [master]:https://travis-ci.org/maugern/EloApi
 [master img]:https://travis-ci.org/maugern/EloApi.svg?branch=master
