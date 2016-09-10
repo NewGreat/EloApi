@@ -1,4 +1,4 @@
-EloApi
+EloApi [![][master img]][master]
 ======
 
 *Simple & easy implementation of Elo rating system.*
@@ -15,3 +15,5 @@ Copyright © 2016 Nicolas Mauger. Released under the [WTFPL license].
 
 [api documentation]:https://github.com/maugern/StrongBox/blob/master/LICENSE.md
 [WTFPL license]:https://github.com/maugern/EloApi/blob/master/LICENSE.md
+[master]:https://travis-ci.org/maugern/EloApi
+[master img]:https://travis-ci.org/maugern/EloApi.svg?branch=master
