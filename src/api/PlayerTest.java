@@ -1,3 +1,11 @@
+
+/**
+ * EloApi
+ * @author Nicolas Mauger
+ * @date 09/01/2017
+ * https://github.com/maugern/EloApi
+ * Released under the WTFPL license
+ */
 package api;
 
 import static org.junit.Assert.assertEquals;
@@ -58,7 +66,7 @@ public class PlayerTest {
 	}
 	
 	@Test
-	public void test_no_ranked_players() {
+	public void test_not_yet_ranked_players() {
 		// Testing the case where two players are unrated
 		Player player1 = new Player();
 		Player player2 = new Player();
