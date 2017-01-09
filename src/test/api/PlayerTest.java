@@ -6,10 +6,11 @@
  * https://github.com/maugern/EloApi
  * Released under the WTFPL license
  */
-package api;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+
+import main.api.Player;
 
 public class PlayerTest {
 

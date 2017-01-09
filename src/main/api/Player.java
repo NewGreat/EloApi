@@ -6,7 +6,6 @@
  * https://github.com/maugern/EloApi
  * Released under the WTFPL license
  */
-package api;
 
 public class Player {
 
@@ -37,7 +36,7 @@ public class Player {
 	}
 
 	/**
-	 * Play a match between to player. Elo points of these two player will be
+	 * Play a match between two player. Elo points of these two player will be
 	 * calculate depending on the result of the match, their previous rank and
 	 * the development coefficient K. The new Elo rank is given by the formula
 	 * En+1 = En + K * (result - p(D)) If the player has less than 9 played
@@ -129,7 +128,7 @@ public class Player {
 	/**
 	 * Returns a String representing this Player and its values.
 	 * 
-	 * @return a String representing player's Elo points, FIDE rating and the
+	 * @return a String representing player's Elo points and the
 	 *         number of games he played.
 	 */
 	@Override

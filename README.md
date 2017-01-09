@@ -16,7 +16,7 @@ Copyright © 2016 Nicolas Mauger. Released under the [WTFPL license].
 
 
 
-[api documentation]:https://raw.githubusercontent.com/maugern/EloApi/master/doc/index.html
+[api documentation]:https://maugern.github.io/EloApi/
 
 [WTFPL license]:https://github.com/maugern/EloApi/blob/master/LICENSE.md
 
