@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>fr.maugern.elo</groupId>
+	<artifactId>EloApi</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<name>EloApi</name>
+	<url>https://github.com/maugern/EloApi</url>
+	<description>The Elo rating system is a method for calculating the relative skill levels of players in two-player games. You can use it for your multiplayer game or anything you want.</description>
+
+	<developers>
+		<developer>
+			<id>maugern</id>
+			<name>Nicolas Mauger</name>
+			<email>contact@maugern.fr</email>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE Version 2, December 2004</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://svn.apache.org/viewvc/maven</url>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.14</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+</project>
+

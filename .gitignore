@@ -1,23 +1,16 @@
-# Java
 *.class
 .mtj.tmp/
 *.jar
 *.war
 *.ear
 hs_err_pid*
-
-# Eclipse Core
 .project
 .externalToolBuilders/
 *.launch
-*.pydevproject
-.cproject
 .classpath
 .factorypath
 .buildpath
 .target
-.tern-project
-.texlipse
 .springBeans
 .recommenders/
 .settings/*
