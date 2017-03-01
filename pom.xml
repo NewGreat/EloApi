@@ -21,8 +21,7 @@
 	<licenses>
 		<license>
 			<name>DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE Version 2, December 2004</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
+			<url>http://www.wtfpl.net</url>
 		</license>
 	</licenses>
 
@@ -50,10 +49,10 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.16.14</version>
-			<scope>provided</scope>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

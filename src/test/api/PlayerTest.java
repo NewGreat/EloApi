@@ -1,8 +1,9 @@
+package test.api;
 
 /**
- * EloApi
+ * Test class of {@link main.api.Player Player class}
  * @author Nicolas Mauger
- * @date 09/01/2017
+ * @date 01 mar. 2017
  * https://github.com/maugern/EloApi
  * Released under the WTFPL license
  */
