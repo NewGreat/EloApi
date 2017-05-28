@@ -14,7 +14,7 @@ import org.junit.Test;
 import main.api.Elo;
 import main.api.EloRank;
 
-public class PlayerTest {
+public class EloTest {
 
 	@Test
 	public void test_draw() {
