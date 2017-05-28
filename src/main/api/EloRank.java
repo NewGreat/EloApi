@@ -50,8 +50,5 @@ public enum EloRank {
         else
             return EloRank.GrandMaster;
     }
-    
-    
-    
-    
+
 }
