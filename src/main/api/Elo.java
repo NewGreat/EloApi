@@ -1,5 +1,9 @@
 package main.api;
 
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.Getter;
+
 /**
  * Main class of EloApi
  * @author Nicolas Mauger
@@ -7,21 +11,21 @@ package main.api;
  * https://github.com/maugern/EloApi
  * Released under the WTFPL license
  */
+public @Data class Elo {
 
-public class Player {
-
-	private double elo;
+	@Getter (AccessLevel.PUBLIC) private double elo;
 	private int gamesPlayed;
 
-	/**
-	 * Constructs a new Player, who never play a game and who have 1000 Elo
-	 * points by default.
-	 */
-	public Player() {
-		setElo(1000);
-		this.gamesPlayed = 0;
-	}
-
+	/**+
+	 * 
+    * Constructs a new default Elo rank.
+    * By default player will had 1000 points and 0 gamePlayed.
+    */ 
+   public Elo() {
+       this.elo = 1000;
+       this.gamesPlayed = 0;
+   }
+	
 	/**
 	 * Constructs a new Player whose Elo rank and and whose number of played
 	 * games are specified.
@@ -31,8 +35,8 @@ public class Player {
 	 * @param gamesPlayed
 	 *            number of ranked played games
 	 */
-	public Player(double elo, int gamesPlayed) {
-		setElo(elo);
+	public Elo(double elo, int gamesPlayed) {
+		this.elo = elo;
 		this.gamesPlayed = gamesPlayed;
 	}
 
@@ -49,7 +53,7 @@ public class Player {
 	 *            value higher than zero for a win, equals to zero for a draw
 	 *            and less than zero for a lose to opponent
 	 */
-	public void versus(Player player, int result) {
+	public void versus(Elo player, int result) {
 		if (result > 0) {
 			this.winFrom(player);
 			player.loseFrom(this);
@@ -64,38 +68,25 @@ public class Player {
 		player.addPlayedMatch();
 	}
 
-	private void winFrom(Player player) {
+	private void winFrom(Elo player) {
 		if (gamesPlayed < 9)
-			setElo((elo * gamesPlayed + (player.getElo() * 1.15)) / (gamesPlayed + 1));
+			elo = (elo * gamesPlayed + (player.elo * 1.15)) / (gamesPlayed + 1);
 		else
-			setElo(elo + developmentCoefficient() * (1 - probability(this, player)));
+			elo = (elo + developmentCoefficient() * (1 - probability(this, player)));
 	}
 
-	private void loseFrom(Player player) {
+	private void loseFrom(Elo player) {
 		if (gamesPlayed < 9)
-			setElo((elo * gamesPlayed + (player.getElo() * 0.85)) / (gamesPlayed + 1));
+			elo = (elo * gamesPlayed + (player.elo * 0.85)) / (gamesPlayed + 1);
 		else
-			setElo(elo + developmentCoefficient() * (0 - probability(this, player)));
+			elo = (elo + developmentCoefficient() * (0 - probability(this, player)));
 	}
 
-	private void drawFrom(Player player) {
+	private void drawFrom(Elo player) {
 		if (gamesPlayed < 9)
-			setElo((elo * gamesPlayed + player.getElo()) / (gamesPlayed + 1));
+			elo = (elo * gamesPlayed + player.elo) / (gamesPlayed + 1);
 		else
-			setElo(elo + developmentCoefficient() * (0.5 - probability(this, player)));
-	}
-
-	/**
-	 * Returns the Elo rank of this player in double precision
-	 * 
-	 * @return the Elo rank of this player
-	 */
-	public double getElo() {
-		return elo;
-	}
-
-	private void setElo(double elo) {
-		this.elo = elo;
+			elo = (elo + developmentCoefficient() * (0.5 - probability(this, player)));
 	}
 
 	private void addPlayedMatch() {
@@ -122,18 +113,8 @@ public class Player {
 	 *            The player 2
 	 * @return The probability of player 1 winning
 	 */
-	private static double probability(Player p1, Player p2) {
-		return 1 / (1 + Math.pow(10, (-(p1.getElo() - p2.getElo())) / 400.0));
+	private static double probability(Elo p1, Elo p2) {
+		return 1 / (1 + Math.pow(10, (-(p1.elo - p2.elo)) / 400.0));
 	}
 
-	/**
-	 * Returns a String representing this Player and its values.
-	 * 
-	 * @return a String representing player's Elo points and the
-	 *         number of games he played.
-	 */
-	@Override
-	public String toString() {
-		return elo + " elo points with " + gamesPlayed + " games played";
-	}
 }
